@@ -3,10 +3,18 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		84ED062C2381325C007B919B /* Moya in Frameworks */ = {isa = PBXBuildFile; productRef = 84ED062B2381325C007B919B /* Moya */; };
+		84ED062F23814C29007B919B /* ObjectMapper in Frameworks */ = {isa = PBXBuildFile; productRef = 84ED062E23814C29007B919B /* ObjectMapper */; };
+		84ED0632238161BE007B919B /* api.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84ED0631238161BE007B919B /* api.swift */; };
+		84ED06342381636B007B919B /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84ED06332381636B007B919B /* Task.swift */; };
+		84ED0636238166B8007B919B /* RequsetLoadingPlugin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84ED0635238166B8007B919B /* RequsetLoadingPlugin.swift */; };
+		84ED063923816866007B919B /* RxMoya in Frameworks */ = {isa = PBXBuildFile; productRef = 84ED063823816866007B919B /* RxMoya */; };
+		84ED063C2381716B007B919B /* LoginModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84ED063B2381716B007B919B /* LoginModel.swift */; };
+		84ED063E23817214007B919B /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84ED063D23817214007B919B /* LoginViewModel.swift */; };
 		9B6CD0D4236BD7FA00175A55 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B6CD0D3236BD7FA00175A55 /* AppDelegate.swift */; };
 		9B6CD0D6236BD7FA00175A55 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B6CD0D5236BD7FA00175A55 /* SceneDelegate.swift */; };
 		9B6CD0D8236BD7FA00175A55 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B6CD0D7236BD7FA00175A55 /* ContentView.swift */; };
@@ -35,6 +43,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		84ED0631238161BE007B919B /* api.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = api.swift; sourceTree = "<group>"; };
+		84ED06332381636B007B919B /* Task.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
+		84ED0635238166B8007B919B /* RequsetLoadingPlugin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequsetLoadingPlugin.swift; sourceTree = "<group>"; };
+		84ED063B2381716B007B919B /* LoginModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginModel.swift; sourceTree = "<group>"; };
+		84ED063D23817214007B919B /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		9B6CD0D0236BD7FA00175A55 /* SwiftUIProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftUIProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9B6CD0D3236BD7FA00175A55 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9B6CD0D5236BD7FA00175A55 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -56,6 +69,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				84ED063923816866007B919B /* RxMoya in Frameworks */,
+				84ED062F23814C29007B919B /* ObjectMapper in Frameworks */,
+				84ED062C2381325C007B919B /* Moya in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -76,6 +92,32 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		84ED0630238161AC007B919B /* HttpTool */ = {
+			isa = PBXGroup;
+			children = (
+				84ED0631238161BE007B919B /* api.swift */,
+				84ED06332381636B007B919B /* Task.swift */,
+				84ED0635238166B8007B919B /* RequsetLoadingPlugin.swift */,
+			);
+			path = HttpTool;
+			sourceTree = "<group>";
+		};
+		84ED063723816866007B919B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		84ED063A23817151007B919B /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				84ED063B2381716B007B919B /* LoginModel.swift */,
+				84ED063D23817214007B919B /* LoginViewModel.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
 		9B6CD0C7236BD7FA00175A55 = {
 			isa = PBXGroup;
 			children = (
@@ -83,6 +125,7 @@
 				9B6CD0E9236BD80100175A55 /* SwiftUIProjectTests */,
 				9B6CD0F4236BD80100175A55 /* SwiftUIProjectUITests */,
 				9B6CD0D1236BD7FA00175A55 /* Products */,
+				84ED063723816866007B919B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -99,6 +142,8 @@
 		9B6CD0D2236BD7FA00175A55 /* SwiftUIProject */ = {
 			isa = PBXGroup;
 			children = (
+				84ED063A23817151007B919B /* Login */,
+				84ED0630238161AC007B919B /* HttpTool */,
 				9B6CD0D3236BD7FA00175A55 /* AppDelegate.swift */,
 				9B6CD0D5236BD7FA00175A55 /* SceneDelegate.swift */,
 				9B6CD0D7236BD7FA00175A55 /* ContentView.swift */,
@@ -152,6 +197,11 @@
 			dependencies = (
 			);
 			name = SwiftUIProject;
+			packageProductDependencies = (
+				84ED062B2381325C007B919B /* Moya */,
+				84ED062E23814C29007B919B /* ObjectMapper */,
+				84ED063823816866007B919B /* RxMoya */,
+			);
 			productName = SwiftUIProject;
 			productReference = 9B6CD0D0236BD7FA00175A55 /* SwiftUIProject.app */;
 			productType = "com.apple.product-type.application";
@@ -224,6 +274,10 @@
 				Base,
 			);
 			mainGroup = 9B6CD0C7236BD7FA00175A55;
+			packageReferences = (
+				84ED062A2381325C007B919B /* XCRemoteSwiftPackageReference "Moya" */,
+				84ED062D23814C29007B919B /* XCRemoteSwiftPackageReference "ObjectMapper" */,
+			);
 			productRefGroup = 9B6CD0D1236BD7FA00175A55 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -268,7 +322,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				9B6CD0D4236BD7FA00175A55 /* AppDelegate.swift in Sources */,
+				84ED063C2381716B007B919B /* LoginModel.swift in Sources */,
 				9B6CD0D6236BD7FA00175A55 /* SceneDelegate.swift in Sources */,
+				84ED06342381636B007B919B /* Task.swift in Sources */,
+				84ED063E23817214007B919B /* LoginViewModel.swift in Sources */,
+				84ED0636238166B8007B919B /* RequsetLoadingPlugin.swift in Sources */,
+				84ED0632238161BE007B919B /* api.swift in Sources */,
 				9B6CD0D8236BD7FA00175A55 /* ContentView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -594,6 +653,43 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		84ED062A2381325C007B919B /* XCRemoteSwiftPackageReference "Moya" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Moya/Moya.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 13.0.1;
+			};
+		};
+		84ED062D23814C29007B919B /* XCRemoteSwiftPackageReference "ObjectMapper" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "git@github.com:tristanhimmelman/ObjectMapper.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.5.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		84ED062B2381325C007B919B /* Moya */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 84ED062A2381325C007B919B /* XCRemoteSwiftPackageReference "Moya" */;
+			productName = Moya;
+		};
+		84ED062E23814C29007B919B /* ObjectMapper */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 84ED062D23814C29007B919B /* XCRemoteSwiftPackageReference "ObjectMapper" */;
+			productName = ObjectMapper;
+		};
+		84ED063823816866007B919B /* RxMoya */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 84ED062A2381325C007B919B /* XCRemoteSwiftPackageReference "Moya" */;
+			productName = RxMoya;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 9B6CD0C8236BD7FA00175A55 /* Project object */;
 }
