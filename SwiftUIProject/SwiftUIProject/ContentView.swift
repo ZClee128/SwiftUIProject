@@ -8,11 +8,20 @@
 
 import UIKit
 import SwiftUI
+import RxSwift
+import Combine
 
+let dispose = DisposeBag()
 
 struct ContentView: View {
+    var viewModel = LoginViewModel.init()
+    
     var body: some View {
-        Text("Hello World")
+        VStack{
+            Text("data")
+        }.onAppear {
+            self.viewModel.Login()
+        }
     }
 }
 

@@ -13,7 +13,8 @@ import RxMoya
 
 class LoginViewModel: NSObject {
     
+    
     func Login() -> Observable<loginModel> {
-        return ApiProvider.rx.request(.login).filterSuccessfulStatusCodes().asObservable().mapObject(type: loginModel.self)
+        return ApiProvider.rx.request(.login).filterSuccessfulStatusCodes().asObservable().mapJSON().mapObject(type: loginModel.self)
     }
 }

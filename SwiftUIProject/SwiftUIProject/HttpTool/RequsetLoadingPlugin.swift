@@ -54,11 +54,11 @@ extension Observable {
                 throw RxSwiftMoyaError.ParseJosonError
             }
             
-            guard let dicts = array as? [String: Any] else {
+            guard let dicts = array as? [[String: Any]] else {
                 throw RxSwiftMoyaError.ParseJosonError
             }
             
-            return Mapper<T>().mapArray(JSONArray: [dicts])
+            return Mapper<T>().mapArray(JSONArray: dicts)
         }
     }
     
