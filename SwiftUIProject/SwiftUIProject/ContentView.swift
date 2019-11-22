@@ -15,12 +15,15 @@ let dispose = DisposeBag()
 
 struct ContentView: View {
     var viewModel = LoginViewModel.init()
-    
+    @State var str = ""
     var body: some View {
         VStack{
-            Text("data")
+            Text(str)
         }.onAppear {
-            self.viewModel.Login()
+            self.viewModel.Login().subscribe(onNext: { (loginModel) in
+                print("\(loginModel)")
+                self.str = loginModel.username!
+            }).disposed(by: dispose)
         }
     }
 }
