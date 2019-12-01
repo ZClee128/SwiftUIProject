@@ -13,6 +13,10 @@ class ApiTask: NSObject {
     func login(username: String, password: String) -> Task {
         return Moya.Task.requestData(jsonToData(jsonDic: ["username": username,"password":password], targetTye: APi.login)!)
     }
+    
+    func changePsd(oldPsd: String, newPsd: String) -> Task {
+        return Moya.Task.requestData(jsonToData(jsonDic: ["oldPsd":oldPsd,"newPsd":newPsd], targetTye: APi.changepassword)!)
+    }
 }
 
 // 字典转data

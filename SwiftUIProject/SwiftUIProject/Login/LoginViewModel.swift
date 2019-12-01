@@ -12,8 +12,8 @@ import RxSwift
 
 class LoginViewModel: NSObject {
     
-    
     func Login() -> Observable<loginModel> {
         return ApiProvider.rx.request(.login).filterSuccessfulStatusCodes().asObservable().mapJSON().mapObject(type: loginModel.self)
     }
+    
 }

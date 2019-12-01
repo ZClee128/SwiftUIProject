@@ -9,7 +9,6 @@
 import UIKit
 import SwiftUI
 import RxSwift
-import Combine
 
 let dispose = DisposeBag()
 
@@ -22,7 +21,7 @@ struct ContentView: View {
         }.onAppear {
             self.viewModel.Login().subscribe(onNext: { (loginModel) in
                 print("\(loginModel)")
-                self.str = loginModel.username!
+                self.str = loginModel.username!+">>>>"+loginModel.password!
             }).disposed(by: dispose)
         }
     }

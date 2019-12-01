@@ -14,7 +14,10 @@ let ApiProvider = MoyaProvider<APi>(plugins: [RequestLoadingPlugin()])
 
 enum APi {
     case login;
+    case changepassword;
 }
+
+
 
 
 extension APi : TargetType {
@@ -26,6 +29,8 @@ extension APi : TargetType {
         switch self {
         case .login:
             return "/Login"
+        case .changepassword:
+            return "/ChangePsd"
         default: break
 
         }
@@ -45,6 +50,8 @@ extension APi : TargetType {
         switch self {
         case .login:
             return apiTask.login(username: "聪哥",password: "123456")
+        case .changepassword:
+            return apiTask.changePsd(oldPsd: "123456", newPsd: "111111")
         default:
             break
         }
